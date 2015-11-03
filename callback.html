@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript">
+
+function doProcess(a,b,d){
+alert("sum ="+ (a+b).toString());
+d(a,b);
+
+}
+function showDifference(a,b){
+alert("diff = "+(a-b).toString());
+
+
+}
+function showMultiplication(a,b){
+alert("mul="+ (a*b).toString());
+
+}
+doProcess(10,20,showMultiplication);
+</script>
+</head>
+
+</html>

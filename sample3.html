@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #myDiv {
+            border-style: solid;
+            height: 200px;
+            width: 100px;
+            position: fixed;
+            top: 100px;
+            left: 100px;
+            display:none;
+        }
+        .red {
+            border-color: red;
+        }
+        .green {
+            border-color: green;
+        }
+        .black {
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="myDiv"></div>
+    <br>
+    <input type="radio" name="rdo" onchange="tiggerChange(this)" value="red">sai
+    <input type="radio" name="rdo" onclick="tiggerChange(this)" value="green"> pavan
+    <input type="radio" name="rdo" onclick="tiggerChange(this)" value="black">milky
+
+    <script>
+        function sai() {
+            console.log("Inside Sai");
+            document.getElementById("myDiv").style.borderStyle = "solid";
+            document.getElementById("myDiv").style.height = "200px";
+            document.getElementById("myDiv").style.width = "100px";
+            document.getElementById("myDiv").style.position = "fixed";
+            document.getElementById("myDiv").style.top = "100px";
+            document.getElementById("myDiv").style.left = "200px";
+            document.getElementById("myDiv").style.borderColor = "red";
+            document.getElementById("myDiv").innerHTML = "This is first box";
+
+
+        }
+        function pavan() {
+            console.log("Inside Pavan");
+            document.getElementById("has").style.borderStyle = "solid";
+            document.getElementById("has").style.height = "200px";
+            document.getElementById("has").style.width = "100px";
+            document.getElementById("has").style.position = "fixed";
+            document.getElementById("has").style.top = "100px";
+            document.getElementById("has").style.left = "200px";
+            document.getElementById("has").style.borderColor = "green";
+            document.getElementById("has").innerHTML = "This is second box";
+            document.getElementById("myDiv").style.visibility = "hidden";
+
+
+        }
+        function milky() {
+            console.log("Inside milky");
+            document.getElementById("have").style.borderStyle = "solid";
+            document.getElementById("have").style.height = "200px";
+            document.getElementById("have").style.width = "100px";
+            document.getElementById("have").style.position = "fixed";
+            document.getElementById("have").style.top = "100px";
+            document.getElementById("have").style.left = "200px";
+            document.getElementById("have").style.borderColor = "black";
+            document.getElementById("have").innerHTML = "This is third box";
+            document.getElementById("has").style.visibility = "hidden";
+            document.getElementById("myDiv").style.visibility = "hidden";
+
+        }
+
+        function tiggerChange(thisVal) {
+            document.getElementById("myDiv").style.display = "block";
+            if (thisVal.value == "red") {
+                document.getElementById('myDiv').className = 'red'
+            }
+            else if (thisVal.value == "green") {
+                document.getElementById('myDiv').className = 'green'
+            }
+            else if (thisVal.value == "black") {
+                document.getElementById('myDiv').className = 'black'
+            }
+        }
+        function removeClass(classname, element) {
+            var cn = element.className;
+            var rxp = new RegExp("s?b" + classname + "b", "g");
+            cn = cn.replace(rxp, '');
+            element.className = cn;
+        }
+    </script>
+
+</body>
+</html>

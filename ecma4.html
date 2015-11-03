@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+for (let i = 0; i < a.length; i++) {
+    let x = a[i]
+    …
+}
+for (let i = 0; i < b.length; i++) {
+    let y = b[i]
+    …
+}
+
+let callbacks = []
+for (let i = 0; i <= 2; i++) {
+    callbacks[i] = function () 
+	document.write(i *2);
+};
+callbacks[0]() ;
+callbacks[1]();
+callbacks[2]() ;
+</script>
+</head>
+</html>

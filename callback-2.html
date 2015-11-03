@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+</head>
+<body>
+
+<script>
+
+function methodOne(m1, cbFunction){
+//console.log(cbFunction.toString());
+console.log('typeof cbFunction', typeof(cbFunction));
+
+	setTimeout(function(){
+		var response = 'Ínside methodOne value m1 is '+ m1 + ' '+new Date().getTime();
+		cbFunction(response);
+	}, 1500);
+return true;
+}
+
+function methodTwo(t1, cbFunction){
+//console.log(cbFunction.toString());
+
+	setTimeout(function(){
+		var response = 'Ínside methodTwo value t1 is '+ t1 + ' '+new Date().getTime();
+		cbFunction(response);
+	}, 1000);
+return true;
+}
+
+function displayResponse(value){
+	console.log(value);
+
+}
+
+
+methodOne('Sri Sai Pavan',displayResponse);
+methodTwo('Gautam', displayResponse);
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+var count=1;
+function setColor(btn,color,width,height,border){
+   
+    var property = document.getElementById(btn);
+    if (count == 0){
+        property.style.background-color = "green";
+        count=1;        
+    }
+    else{
+        property.style.width = "300px";
+		property.style.height="300px";
+		property.style.border="1px solid black";
+        count=0;
+    }
+
+}
+</script>
+</head>
+
+<body>
+
+<input type="button" id="button" value = "button" style= "color:white" onclick="setColor('button','width','height','border')";/>
+
+</body>
+</html>

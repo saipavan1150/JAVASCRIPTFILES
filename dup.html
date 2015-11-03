@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.sai{
+width:300px;
+height:300px;
+border:1px solid blue;
+position:fixed;
+left:200px;
+top:100px;
+
+}
+.pavan{
+width:300px;
+height:300px;
+border:1px solid green;
+position:fixed;
+left:200px;
+top:100px;
+}
+.milky{
+width:300px;
+height:300px;
+border:1px solid grey;
+position:fixed;
+left:200px;
+top:100px;
+}
+
+</style>
+<script>
+function wow(value) {
+
+    var index = {
+	    
+        1: "sai",
+        2: "pavan",
+		3:  "milky",
+    };
+	document.getElementById("x").setAttribute("class", index[value]); 
+}
+
+</script>
+</head>
+<body onload="myFunction()">
+<div class="sai"></div>
+<div class="pavan"></div>
+<div class="milky"></div>
+
+<table>
+<tr>
+
+<input type="radio" name="myRadios" onchange="wow(1);" value="1" />
+<input type="radio" name="myRadios" onchange="wow(2);" value="2" />
+<input type="radio" name="myRadios" onchange="wow(3);" value="3" />
+</tr>
+<tr>
+  <td id="x" class="vandu"> Colouring box </td>
+  <td id="y" class="saii"></td>
+  </tr>
+</table>
+</body>
+</html>
